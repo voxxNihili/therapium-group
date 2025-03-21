@@ -3,12 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #27557C;
+  --secondary: #2D6C9B;
+  /* Font variables will be injected by Next.js */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-lato);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -16,11 +21,53 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #27557C;
+    --secondary: #2D6C9B;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
+}
+
+
+/* You can create utility classes for specific font usage */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-crackers {
+  font-family: var(--font-crackers-brusher);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
+}
+
+/* Primary color utility classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+/* Secondary color utility classes */
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
 }
