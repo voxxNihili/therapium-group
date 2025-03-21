@@ -12,7 +12,7 @@ export default function Hero() {
           <div className="md:w-1/2 mt-8 md:mt-0 relative z-2">
             <h1 className="font-lato font-bold text-[70px] leading-[85px] tracking-[-1px] text-primary mb-4 relative">
               Gemeinsam sind <br /> wir <span className="relative z-10">stark</span>
-              <svg className="absolute z-0 transform translate-x-[1rem] translate-y-[-1rem]" width="282" height="142" viewBox="0 0 282 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="absolute z-0" style={{ transform: 'translate(3rem, -7rem)' }} width="282" height="142" viewBox="0 0 282 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
