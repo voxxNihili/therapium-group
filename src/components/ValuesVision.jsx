@@ -28,15 +28,15 @@ const ValuesVision = () => {
   return (
     <section className="bg-secondary py-16 font-lato">
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16">
-          <div className="md:w-1/2 mb-8 md:mb-0 text-left">
-            <h2 className="md:text-7xl sm:text-5xl font-regular text-white text-left">
+        <div className="flex flex-col items-center md:items-start md:flex-row justify-between mb-16">
+          <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+            <h2 className="text-3xl md:text-7xl font-regular text-white text-center md:text-left">
               Unsere <br />
               Werte & Visionen
             </h2>
           </div>
-          <div className="md:w-1/2 self-stretch flex flex-col justify-end text-left">
-            <p className="text-white md:text-2xl sm:text-2xl text-left">
+          <div className="md:w-1/2 self-stretch flex flex-col justify-end text-center md:text-left">
+            <p className="text-white md:text-2xl sm:text-2xl text-center md:text-left">
               Leitgedanken für erfolgreiches Konzept & <br />
               nachhaltigen Erfolg für unsere Praxen
             </p>
@@ -45,7 +45,7 @@ const ValuesVision = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto md:mx-0">
           {values.map((value, index) => (
-            <div key={index} className="flex flex-col items-start w-[264px] h-[248px] mx-auto md:mx-0">
+            <div key={index} className="flex flex-col items-start w-[196px] h-[248px] mx-auto md:mx-0">
               <div className="mb-6">
                 <img 
                   src={value.icon} 

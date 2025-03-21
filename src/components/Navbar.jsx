@@ -12,8 +12,18 @@ const Navbar = () => {
     setMounted(true);
   }, []);
 
+  // Function to scroll to ApplicationForm component
+  const scrollToApplicationForm = (e) => {
+    e.preventDefault();
+    const applicationForm = document.getElementById('application-form');
+    if (applicationForm) {
+      applicationForm.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false); // Close mobile menu if open
+    }
+  };
+
   return (
-    <nav className="bg-white shadow-sm fixed w-full z-50">
+    <nav className="bg-white shadow-sm fixed w-full z-999">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           {/* Logo */}
@@ -43,12 +53,13 @@ const Navbar = () => {
             <Link href="/kontakt" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
               Kontakt
             </Link>
-            <Link
-              href="/leader-werden"
-              className="bg-[#FBDB12]  hover:bg-yellow-500 text-gray-900 px-4 py-2  text-sm font-medium transition-colors duration-200"
+            <a
+              href="#application-form"
+              onClick={scrollToApplicationForm}
+              className="bg-[#FBDB12] hover:bg-yellow-500 text-gray-900 px-4 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
             >
               Leader werden
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -88,12 +99,13 @@ const Navbar = () => {
             <Link href="/kontakt" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
               Kontakt
             </Link>
-            <Link
-              href="/leader-werden"
-              className="block bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-4"
+            <a
+              href="#application-form"
+              onClick={scrollToApplicationForm}
+              className="block bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-4 cursor-pointer"
             >
               Leader werden
-            </Link>
+            </a>
           </div>
         </div>
       )}

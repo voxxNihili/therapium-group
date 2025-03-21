@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Email Configuration
+
+The application form uses nodemailer to send emails to mail@therapium.de. To configure the email functionality:
+
+1. Create a `.env.local` file in the root directory if it doesn't exist
+2. Add the following environment variables with your SMTP server details:
+
+```bash
+EMAIL_SERVER_HOST=your-smtp-server.com
+EMAIL_SERVER_PORT=587
+EMAIL_SERVER_SECURE=false
+EMAIL_SERVER_USER=your-username
+EMAIL_SERVER_PASSWORD=your-password
+EMAIL_FROM=noreply@therapium.de
+```
+
+You can use services like Gmail, SendGrid, Mailgun, or any other SMTP provider to send emails.

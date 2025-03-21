@@ -1,12 +1,15 @@
 "use client";
 
 import React from "react";
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Box, Container } from "@mui/material";
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Box, Container, useMediaQuery, useTheme } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
 const CareerPath = () => {
   const [expanded, setExpanded] = React.useState("panel1");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMedium = useMediaQuery('(max-width:1440px)');
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -59,8 +62,8 @@ const CareerPath = () => {
             color: "#A1A1A1",
             mb: 1,
             fontFamily: "var(--font-lato), sans-serif",
-            fontSize: "24px",
-            lineHeight: "35px",
+            fontSize: isMobile ? "18px" : isMedium ? "20px" : "24px",
+            lineHeight: isMobile ? "26px" : isMedium ? "30px" : "35px",
           }}
         >
           Leadership Karrierepfad
@@ -68,11 +71,12 @@ const CareerPath = () => {
         <Typography
           component="h2"
           sx={{
-            fontSize: "60px",
+            fontSize: isMobile ? "32px" : isMedium ? "45px" : "60px",
             color: "#27557C",
             fontWeight: "medium",
             mb: 4,
             fontFamily: "var(--font-lato)",
+            lineHeight: isMobile ? "1.2" : "normal",
           }}
         >
           Dein Weg zur <br /> eigenen Praxis
@@ -110,11 +114,11 @@ const CareerPath = () => {
                 variant="h2"
                 component="span"
                 sx={{
-                  fontSize: "60px",
+                  fontSize: isMobile ? "36px" : isMedium ? "48px" : "60px",
                   fontWeight: "bold",
                   color: "#27557C",
-                  mr: 4,
-                  width: "60px",
+                  mr: isMobile ? 2 : 4,
+                  width: isMobile ? "30px" : isMedium ? "45px" : "60px",
                   fontFamily: "var(--font-lato)",
                 }}
               >
@@ -126,8 +130,8 @@ const CareerPath = () => {
                 sx={{
                   color: "#27557C",
                   fontWeight: "bold",
-                  fontSize: "34px",
-                  lineHeight: "50px",
+                  fontSize: isMobile ? "18px" : isMedium ? "26px" : "34px",
+                  lineHeight: isMobile ? "24px" : isMedium ? "36px" : "50px",
                   fontFamily: "var(--font-lato)",
                 }}
               >
@@ -135,8 +139,19 @@ const CareerPath = () => {
               </Typography>
             </Box>
           </AccordionSummary>
-          <AccordionDetails sx={{ pl: 12, pr: 4, pb: 3, width: "69%" }}>
-            <Typography sx={{ fontFamily: "var(--font-lato), sans-serif", fontSize: "17px", lineHeight: "27px" }}>{step.content}</Typography>
+          <AccordionDetails sx={{ 
+            pl: isMobile ? 5 : isMedium ? 8 : 12, 
+            pr: 4, 
+            pb: 3, 
+            width: isMobile ? "100%" : isMedium ? "80%" : "69%" 
+          }}>
+            <Typography sx={{ 
+              fontFamily: "var(--font-lato), sans-serif", 
+              fontSize: isMobile ? "15px" : isMedium ? "16px" : "17px", 
+              lineHeight: isMobile ? "22px" : isMedium ? "24px" : "27px" 
+            }}>
+              {step.content}
+            </Typography>
           </AccordionDetails>
         </Accordion>
       ))}
@@ -144,20 +159,22 @@ const CareerPath = () => {
       <Box
         sx={{
           display: "flex",
+          flexDirection: isMobile ? "column" : "row",
           justifyContent: "start",
-          alignItems: "center",
+          alignItems: isMobile ? "flex-start" : "center",
           mt: 5,
           pt: 3,
         }}
-        className="w-[60%]"
+        className={isMobile ? "w-full" : "w-[60%]"}
       >
         <Typography
           variant="body1"
           sx={{
-            maxWidth: "70%",
+            maxWidth: isMobile ? "100%" : "70%",
             fontFamily: "var(--font-lato), sans-serif",
-            fontSize: "24px",
-            lineHeight: "35px",
+            fontSize: isMobile ? "18px" : isMedium ? "20px" : "24px",
+            lineHeight: isMobile ? "26px" : isMedium ? "30px" : "35px",
+            mb: isMobile ? 3 : 0,
           }}
         >
           Wenn auch du diesen Weg beschreiten möchtest, schicke uns deine Bewerbung!
@@ -166,20 +183,26 @@ const CareerPath = () => {
           sx={{
             bgcolor: "#ffd200",
             borderRadius: "50%",
-            width: 140,
-            height: 140,
+            width: isMobile ? 100 : isMedium ? 120 : 140,
+            height: isMobile ? 100 : isMedium ? 120 : 140,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             p: 2,
             textAlign: "center",
+            alignSelf: isMobile ? "center" : "auto",
           }}
         >
           <Typography
             variant="body1"
             sx={{
               rotate: "-8.6deg",
-              fontSize: "40px",
+              fontSize: { 
+                xs: "25px", 
+                sm: "28px", 
+                md: "32px", 
+                lg: "40px" 
+              },
               color: "#27557C",
               fontWeight: "bold",
               fontFamily: "var(--font-crackers-brusher)",

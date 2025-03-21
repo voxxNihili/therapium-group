@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-white">
       <div className="relative">
-        <button onClick={scrollToTop} className={`absolute right-0 top-4 transform transition-opacity duration-300 ${showScrollButton ? "opacity-100" : "opacity-0"}`} aria-label="Scroll to top">
+        <button onClick={scrollToTop} className={`absolute right-4 md:right-0 top-4 transform transition-opacity duration-300 ${showScrollButton ? "opacity-100" : "opacity-0"}`} aria-label="Scroll to top">
           <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="27.5" cy="27.5" r="27.5" transform="rotate(-180 27.5 27.5)" fill="#FBDB12" />
             <rect width="32" height="32" transform="translate(12 43) rotate(-90)" fill="#FBDB12" />
@@ -47,15 +47,15 @@ const Footer = () => {
           </svg>
         </button>
       </div>
-      <Container maxWidth="max-w-[90%]">
+      <Container maxWidth="max-w-[95%] lg:max-w-[90%]">
         {/* Main footer section */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Left section - Logo and social icons (1/3) */}
+        <div className="py-8 md:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Left section - Logo and social icons */}
           <div className="flex flex-col items-start justify-between">
-            <Link href="/" className="mb-6">
-              <Image src="/therapium-logo-white.png" alt="Therapium Group" width={220} height={50} className="h-12 w-auto" />
+            <Link href="/" className="mb-4 md:mb-6">
+              <Image src="/therapium-logo-white.png" alt="Therapium Group" width={220} height={50} className="h-10 md:h-12 w-auto" />
             </Link>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-3 md:mt-4">
               <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <div className="w-8 h-8 flex items-center justify-center text-white">
                   <svg className="w-6 h-6" fill="#FBDB12" viewBox="0 0 24 24" aria-hidden="true">
@@ -87,15 +87,17 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col justify-end">
+          
+          <div className="flex flex-col justify-start sm:justify-end order-3 sm:order-2 lg:order-2 mt-6 sm:mt-0">
             <div className="flex flex-col space-y-3">
               <Link href="/impressum" className="text-sm hover:text-yellow-400 transition-colors">
                 Impressum
               </Link>{" "}
             </div>
           </div>
-          {/* Middle section - Navigation links (1/3) */}
-          <div className="flex flex-col">
+          
+          {/* Middle section - Navigation links */}
+          <div className="flex flex-col order-2 sm:order-1 lg:order-3">
             <div className="flex flex-col space-y-3">
               <Link href="/" className="hover:text-yellow-400 transition-colors">
                 Home
@@ -115,7 +117,7 @@ const Footer = () => {
             </div>
 
             {/* Adding the legal links below navigation with space above */}
-            <div className="mt-auto pt-12">
+            <div className="mt-auto pt-6 md:pt-12">
               <div className="flex space-x-6">
                 <Link href="/datenschutz" className="text-sm hover:text-yellow-400 transition-colors">
                   Datenschutz
@@ -124,14 +126,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right section - Text content (1/3) */}
-          <div className="flex flex-col text-right">
-            <p className="text-2xl font-medium mb-3">
+          {/* Right section - Text content */}
+          <div className="flex flex-col sm:text-right order-4 mt-6 sm:mt-0">
+            <p className="text-xl md:text-2xl font-medium mb-3">
               Lerne unsere Praxen kennen.
               <br /> Auf THERAPIUM lernst du noch mehr über uns kennen!
             </p>
-            <p className="mb-6"></p>
-            <Link href="https://therapium.de" className="text-yellow-400 flex  group justify-end">
+            <p className="mb-4 md:mb-6"></p>
+            <Link href="https://therapium.de" className="text-yellow-400 flex sm:justify-end group">
               ZU THERAPIUM
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="#FBDB12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -139,7 +141,7 @@ const Footer = () => {
             </Link>
 
             {/* Copyright text at the bottom of the right section */}
-            <div className="mt-auto pt-12">
+            <div className="mt-auto pt-6 md:pt-12">
               <div className="text-sm text-white/[0.36]">THERAPIUM © {new Date().getFullYear()} All Rights reserved</div>
             </div>
           </div>

@@ -1,31 +1,39 @@
+"use client";
 import Image from "next/image";
 import Container from "./Container";
+import { useState, useEffect } from "react";
 
 const Benefits = () => {
   const benefits = [
     {
       icon: "/svg/erfolgskonzept.svg",
       title: "Zugang zum\nErfolgskonzept",
+      content:"Profitiere von einem bewährten System, das bereits mehrfach erfolgreich umgesetzt wurde – ohne bei null anfangen zu müssen."
     },
     {
       icon: "/svg/wissenstransfer.svg",
       title: "Umfangreicher\nWissenstransfer",
+      content: "Lerne von erfahrenen Experten, tausche dich mit erfolgreichen Geschäftsführern aus und nutze wertvolles Branchenwissen."
     },
     {
       icon: "/svg/risiko.svg",
       title: "Vermeidung\nvon Risiko",
+      content: "Dank unserer erprobten Strategien umgehst du typische Fehler und minimierst unternehmerische Unsicherheiten."
     },
     {
       icon: "/svg/geld.svg",
       title: "Spare Geld durch\nteure Fehler",
+      content: "Durch unser Know-how und unsere Erfahrung bewahrst du dich vor kostspieligen Fehlinvestitionen und unnötigen Ausgaben."
     },
     {
       icon: "/svg/struktur.svg",
       title: "Erfolg durch\nStruktur",
+      content: "Konzentriere dich auf deine Patienten – wir übernehmen die administrativen Aufgaben wie Personalmanagement, Abrechnung und Organisation."
     },
     {
       icon: "/svg/zeit.svg",
       title: "Enorme\nZeitersparnis",
+      content: "Mit unserem etablierten System, klaren Prozessen und professioneller Unterstützung erreichst du dein Ziel schneller und effizienter."
     },
   ];
 
@@ -41,19 +49,47 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-secondary rounded-md p-8 flex flex-col items-center justify-center text-center h-[220px]"
+              className={`
+                group rounded-md p-6 flex flex-col transition-all duration-300 relative
+                bg-white border border-secondary md:bg-secondary md:border-0
+                md:hover:bg-white md:hover:border md:hover:border-secondary
+                h-auto md:h-[280px]
+              `}
             >
-              <div className="mb-4">
-                <img 
-                  src={benefit.icon} 
-                  alt={benefit.title} 
-                  width={48} 
-                  height={48} 
-                  className="w-12 h-12" 
-                  style={{ filter: "brightness(0) saturate(100%) invert(88%) sepia(61%) saturate(1200%) hue-rotate(0deg) brightness(105%) contrast(102%)" }}
-                />
+              {/* Desktop-only default state (white text on blue bg) */}
+              <div className="hidden md:flex flex-col items-center text-center h-full justify-center z-10 group-hover:opacity-0 transition-opacity duration-300">
+                <div className="mb-4">
+                  <img 
+                    src={benefit.icon} 
+                    alt={benefit.title} 
+                    width={48} 
+                    height={48} 
+                    className="w-12 h-12" 
+                    style={{ 
+                      filter: "brightness(0) saturate(100%) invert(88%) sepia(61%) saturate(1200%) hue-rotate(0deg) brightness(105%) contrast(102%)"
+                    }}
+                  />
+                </div>
+                <h3 className="text-white text-2xl font-medium whitespace-pre-line">{benefit.title}</h3>
               </div>
-              <h3 className="text-white text-2xl font-medium whitespace-pre-line">{benefit.title}</h3>
+              
+              {/* Mobile visible and desktop hover state content */}
+              <div className="flex md:absolute inset-0 p-6 flex-col items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mb-4">
+                  <img 
+                    src={benefit.icon} 
+                    alt={benefit.title} 
+                    width={48} 
+                    height={48} 
+                    className="w-12 h-12" 
+                    style={{ 
+                      filter: "brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(1565%) hue-rotate(171deg) brightness(93%) contrast(87%)"
+                    }}
+                  />
+                </div>
+                <h3 className="text-[#27557C] text-2xl font-medium whitespace-pre-line mb-3 text-center">{benefit.title}</h3>
+                <p className="text-[#555555] text-center">{benefit.content}</p>
+              </div>
             </div>
           ))}
         </div>
