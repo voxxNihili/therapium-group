@@ -7,7 +7,9 @@ const SuccessStory = () => {
         <h2 className="text-2xl md:text-3xl  mb-8">Erfolgsgeschichten bei THERAPIUM</h2>
 
         <div className="mb-8">
-          <h3 className="text-2xl md:text-4xl font-medium mb-6">"Ich hätte nie gedacht, dass ich so schnell und mit dieser Unterstützung einmal meine eigene Praxis führen würde – <br/> bis ich auf THERAPIUM gestoßen bin."</h3>
+          <h3 className="text-2xl md:text-4xl font-medium mb-6">
+            "Ich hätte nie gedacht, dass ich so schnell und mit dieser Unterstützung einmal meine eigene Praxis führen würde – <br /> bis ich auf THERAPIUM gestoßen bin."
+          </h3>
           <div className="h-px w-1/3 bg-white/30 my-6"></div>
         </div>
 
@@ -47,13 +49,13 @@ const SuccessStory = () => {
             </div>
           </div>
         </div>
-   
-        <div className="flex justify-center mt-20">
-          <div className="bg-yellow-400 rounded-full p-3 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-900" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+
+        <div className="flex justify-center md:justify-center mt-16">
+          <button className="bg-[#FBDB12] color-[#27557C] rounded-full p-4  transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#27557C" viewBox="0 0 24 24" stroke="#27557C">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     </section>

@@ -63,7 +63,7 @@ const ValuesVision = () => {
         </div>
 
         <div className="flex justify-center md:justify-center mt-16">
-          <button className="bg-yellow-400 rounded-full p-4 hover:bg-yellow-300 transition-colors">
+          <button className="bg-[#FBDB12] rounded-full p-4  transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
