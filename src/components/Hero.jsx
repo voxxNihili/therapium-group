@@ -54,7 +54,7 @@ export default function Hero() {
                 Werde unser neuer Partner für <br className="hidden md:block" /> deinen Weg
                 zum Erfolg!
               </p>
-              <div className="flex justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start mb-12 md:mb-0">
                 <button
                   type="button"
                   className="bg-[#FBDB12] hover:bg-yellow-500 text-[#27557C] font-crackers font-normal text-[28px] sm:text-[35px] md:text-[40px] leading-[1] md:leading-[33px] tracking-[0.01em] text-center rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex items-center justify-center cursor-pointer"
@@ -77,7 +77,7 @@ export default function Hero() {
                 priority
               />
               {/* Puzzle image positioned with z-index and translation */}
-              <div className="absolute z-10 w-[120px] h-[135px] sm:w-[150px] sm:h-[170px] md:w-[196px] md:h-[220px] bottom-[-40px] right-[-60px] sm:bottom-[-60px] sm:right-[-90px] md:bottom-[20vh] md:right-[-120px]">
+              <div className="absolute z-10 w-[120px] h-[135px] sm:w-[150px] sm:h-[170px] md:w-[196px] md:h-[220px] bottom-[-40px] right-[-60px] sm:bottom-[-60px] sm:right-[-90px] md:bottom-[20vh] md:right-[-120px] max-[420px]:right-[-30px]">
                 <Image
                   src="/puzzle.webp"
                   alt="Puzzle"

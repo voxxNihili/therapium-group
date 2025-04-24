@@ -27,16 +27,16 @@ const SuccessStory = () => {
               </div>
 
               {/* Profile section */}
-              <div className="flex flex-row items-center space-y-4 md:w-48 md:flex-shrink-0">
+              <div className="flex flex-row items-center md:w-full md:flex-shrink-0">
                 <div className="relative">
                   <div className="w-32 h-32 rounded-full overflow-hidden relative">
                     <Image src="/akis.webp" alt="Akis - Geschäftsführer" width={128} height={128} className="object-cover" />
                   </div>
                 </div>
-                <div className="text-start pl-12">
+                <div className="ml-4 md:ml-6">
                   <h4 className="text-xl font-semibold text-[#FBDB12]">Akis</h4>
                   <p className="text-white/80">Geschäftsführer</p>
-                  <p className="text-white w-100">THERAPIUM Charlottenburg</p>
+                  <p className="text-white">THERAPIUM Charlottenburg</p>
                 </div>
               </div>
             </div>
@@ -44,7 +44,7 @@ const SuccessStory = () => {
 
           {/* Badge column */}
           <div className="col-span-1 md:col-span-2 flex justify-center md:justify-start items-center">
-            <div className="bg-yellow-400 text-blue-900 rounded-full p-4 w-34 h-34 flex items-center justify-center font-bold text-lg rotate-[-8.15deg]">
+            <div className="bg-yellow-400 text-[#27557C] rounded-full p-4 w-34 h-34 flex items-center justify-center font-bold text-lg rotate-[-8.15deg]">
               <span className="font-crackers  font-normal text-[32px] leading-[33px] text-center leading-tight">DAS WILL ICH AUCH!</span>
             </div>
           </div>

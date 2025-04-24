@@ -175,6 +175,7 @@ const CareerPath = () => {
             fontSize: isMobile ? "18px" : isMedium ? "20px" : "24px",
             lineHeight: isMobile ? "26px" : isMedium ? "30px" : "35px",
             mb: isMobile ? 3 : 0,
+            color: "#191919"
           }}
         >
           Wenn auch du diesen Weg beschreiten möchtest, schicke uns deine Bewerbung!
@@ -183,8 +184,8 @@ const CareerPath = () => {
           sx={{
             bgcolor: "#ffd200",
             borderRadius: "50%",
-            width: isMobile ? 100 : isMedium ? 120 : 140,
-            height: isMobile ? 100 : isMedium ? 120 : 140,
+            width: isMobile ? 105 : isMedium ? 120 : 140,
+            height: isMobile ? 105 : isMedium ? 120 : 140,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -198,14 +199,17 @@ const CareerPath = () => {
             sx={{
               rotate: "-8.6deg",
               fontSize: { 
-                xs: "25px", 
+                xs: "24px", 
                 sm: "28px", 
                 md: "32px", 
                 lg: "40px" 
               },
               color: "#27557C",
-              fontWeight: "bold",
+              fontWeight: "normal",
               fontFamily: "var(--font-crackers-brusher)",
+              lineHeight: isMobile ? "1.1" : "normal",
+              textTransform: "uppercase",
+              letterSpacing: "0.5px",
             }}
           >
             ICH BIN BEREIT

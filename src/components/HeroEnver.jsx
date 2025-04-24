@@ -9,7 +9,7 @@ export default function HeroEnver() {
           <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
             {/* Left: Content */}
             <div className="w-full md:w-1/3 text-white p-4 md:px-8 items-center">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-light text-[#A1A1A1] mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-xl md:text-2xl font-light text-white  mb-4 sm:mb-6">
                 Gründer & Multiunternehmer
               </h2>
 
