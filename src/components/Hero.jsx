@@ -77,7 +77,7 @@ export default function Hero() {
                 priority
               />
               {/* Puzzle image positioned with z-index and translation */}
-              <div className="absolute z-10 w-[120px] h-[135px] sm:w-[150px] sm:h-[170px] md:w-[196px] md:h-[220px] bottom-[-40px] right-[-60px] sm:bottom-[-60px] sm:right-[-90px] md:bottom-[20vh] md:right-[-120px] max-[420px]:right-[-30px]">
+              <div className="absolute z-10 w-[120px] h-[135px] sm:w-[150px] sm:h-[170px] md:w-[196px] md:h-[220px] bottom-[-40px] right-[-60px] sm:bottom-[-60px] sm:right-[-90px] md:top-[70%] md:right-[-120px] max-[420px]:right-[-30px]">
                 <Image
                   src="/puzzle.webp"
                   alt="Puzzle"
