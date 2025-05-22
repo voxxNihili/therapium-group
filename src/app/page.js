@@ -11,15 +11,33 @@ import ApplicationForm from "../components/ApplicationForm";
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <Hero />
-      <ValuesVision />
-      <Benefits />
-      <HeroEnver />
-      <TherapiumZahlen />
-      <SuccessStory />
-      <CareerPath />
-      <WerdeLeader />
-      <ApplicationForm />
+      <div id="section-hero">
+        <Hero />
+      </div>
+      <div id="section-values">
+        <ValuesVision />
+      </div>
+      <div id="section-benefits">
+        <Benefits />
+      </div>
+      <div id="section-hero-enver">
+        <HeroEnver />
+      </div>
+      <div id="section-zahlen">
+        <TherapiumZahlen />
+      </div>
+      <div id="section-success">
+        <SuccessStory />
+      </div>
+      <div id="section-career">
+        <CareerPath />
+      </div>
+      <div id="section-leader">
+        <WerdeLeader />
+      </div>
+      <div id="section-application-form">
+        <ApplicationForm />
+      </div>
     </div>
   );
 }

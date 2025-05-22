@@ -44,7 +44,7 @@ const SuccessStory = () => {
 
           {/* Badge column */}
           <div className="col-span-1 md:col-span-2 flex justify-center md:justify-start items-center">
-            <div className="bg-yellow-400 text-[#27557C] rounded-full p-4 w-34 h-34 flex items-center justify-center font-bold text-lg rotate-[-8.15deg]">
+            <div className="bg-[#FBDB12] text-[#27557C] rounded-full p-4 w-34 h-34 flex items-center justify-center font-bold text-lg rotate-[-8.15deg]">
               <span className="font-crackers  font-normal text-[32px] leading-[33px] text-center leading-tight">DAS WILL ICH AUCH!</span>
             </div>
           </div>

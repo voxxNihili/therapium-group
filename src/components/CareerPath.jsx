@@ -165,7 +165,7 @@ const CareerPath = () => {
           mt: 5,
           pt: 3,
         }}
-        className={isMobile ? "w-full" : "w-[60%]"}
+        className={isMobile ? "w-full" : "md:w-[60%] w-full"}
       >
         <Typography
           variant="body1"
@@ -184,8 +184,8 @@ const CareerPath = () => {
           sx={{
             bgcolor: "#ffd200",
             borderRadius: "50%",
-            width: isMobile ? 105 : isMedium ? 120 : 140,
-            height: isMobile ? 105 : isMedium ? 120 : 140,
+            width: isMobile ? 105 : isMedium ? 130 : 140,
+            height: isMobile ? 105 : isMedium ? 130 : 140,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -197,22 +197,27 @@ const CareerPath = () => {
           <Typography
             variant="body1"
             sx={{
-              rotate: "-8.6deg",
-              fontSize: { 
-                xs: "24px", 
-                sm: "28px", 
-                md: "32px", 
-                lg: "40px" 
-              },
+              rotate: "-8.15deg",
+              fontSize: isMobile ? "27px" : isMedium ? "36px" : "40px",
               color: "#27557C",
               fontWeight: "normal",
               fontFamily: "var(--font-crackers-brusher)",
-              lineHeight: isMobile ? "1.1" : "normal",
+              lineHeight: 1.1,
               textTransform: "uppercase",
               letterSpacing: "0.5px",
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              whiteSpace: "pre-line",
+              textOverflow: "ellipsis",
+              userSelect: "none",
             }}
           >
-            ICH BIN BEREIT
+            {"ICH BIN\nBEREIT"}
           </Typography>
         </Box>
       </Box>

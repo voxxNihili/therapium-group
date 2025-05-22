@@ -236,7 +236,7 @@ const ApplicationForm = () => {
             <div className="mt-8 md:mt-10">
               <button
                 type="submit"
-                className="w-full py-3 md:py-4 bg-[#FFD200] hover:bg-[#FFDA33] text-[#27557C] font-bold text-sm md:text-base lg:text-lg rounded-md transition duration-300"
+                className="w-full py-3 md:py-4 bg-[#FFD200] hover:bg-[#FFDA33] text-[#27557C] font-bold text-sm md:text-base lg:text-lg rounded-md transition duration-300 cursor-pointer"
                 disabled={!formData.datenschutz || isSubmitting}
               >
                 {isSubmitting ? 'Wird gesendet...' : 'Bewerbung absenden!'}

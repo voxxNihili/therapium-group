@@ -38,6 +38,9 @@ const crackersBrusher = localFont({
 export const metadata = {
   title: 'Therapium Group',
   description: 'Therapium Group - Professional Healthcare Solutions',
+  icons: {
+    icon: 'https://therapium-teksenbilisim.s3.eu-central-1.amazonaws.com/public/therapium-logo-32x32.png',
+  },
 };
 
 export default function RootLayout({ children }) {

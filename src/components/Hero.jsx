@@ -8,24 +8,15 @@ export default function Hero() {
   const imageLeftShift = "var(--image-left-shift, 2rem)"; // Default value 2rem
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full bg-white min-h-screen">
+    <section className="relative flex flex-col items-center w-full bg-white min-h-[960px]">
       <Container className="w-full h-full">
         <div className="flex flex-col-reverse md:flex-row relative h-full">
           {/* SOL TARAF: METİN ve BUTON */}
           <div className="md:w-1/2 flex items-center justify-center h-full my-auto pb-8 md:pb-0 pt-10 md:pt-0">
             <div className="relative z-2 mt-8 md:mt-0">
               <h1 className="font-lato font-bold text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] leading-[1.2] md:leading-[85px] tracking-[-1px] text-primary mb-4 relative text-center md:text-left">
-                Gemeinsam sind <br className="hidden md:block" /> wir{" "}
-                <span className="relative z-10">stark</span>
-                <svg
-                  className="absolute z-0 hidden md:block"
-                  style={{ transform: "translate(3rem, -7rem)" }}
-                  width="282"
-                  height="142"
-                  viewBox="0 0 282 142"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                Gemeinsam sind <br className="hidden md:block" /> wir <span className="relative z-10">stark</span>
+                <svg className="absolute z-[-1] hidden md:block" style={{ transform: "translate(3rem, -7rem)" }} width="282" height="142" viewBox="0 0 282 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -34,13 +25,7 @@ export default function Hero() {
                     strokeWidth="2"
                   />
                 </svg>
-                <svg
-                  className="absolute z-0 hidden"
-                  style={{ transform: "translate(8rem, -4rem)", width: "180px", height: "90px" }}
-                  viewBox="0 0 282 142"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg className="absolute z-[-1] hidden" style={{ transform: "translate(8rem, -4rem)", width: "180px", height: "90px" }} viewBox="0 0 282 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -51,8 +36,7 @@ export default function Hero() {
                 </svg>
               </h1>
               <p className="text-primary mb-6 text-base sm:text-lg text-center md:text-left">
-                Werde unser neuer Partner für <br className="hidden md:block" /> deinen Weg
-                zum Erfolg!
+                Werde unser neuer Partner für <br className="hidden md:block" /> deinen Weg zum Erfolg!
               </p>
               <div className="flex justify-center md:justify-start mb-12 md:mb-0">
                 <button
@@ -66,25 +50,24 @@ export default function Hero() {
           </div>
           {/* SAĞ TARAF: GÖRSELLER */}
           <div className="md:w-1/2 flex items-start md:items-start justify-center relative pt-0 mb-8 md:mb-0 transform md:-translate-x-[36%]">
-            <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[558px] md:h-screen">
+            <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[558px]">
               <Image
                 src="/hero.webp"
                 alt="Therapium Group"
                 width={558}
                 height={660}
                 className="w-full h-auto object-cover max-h-[400px] sm:max-h-[500px] md:max-h-none md:h-auto md:w-[558px] md:object-top md:object-contain"
-                style={{ height: "100vh", objectPosition: "center top" }}
+                style={{ objectPosition: "center top" }}
                 priority
               />
-              {/* Puzzle image positioned with z-index and translation */}
-              <div className="absolute z-10 w-[120px] h-[135px] sm:w-[150px] sm:h-[170px] md:w-[196px] md:h-[220px] bottom-[-40px] right-[-60px] sm:bottom-[-60px] sm:right-[-90px] md:top-[70%] md:right-[-120px] max-[420px]:right-[-30px]">
-                <Image
-                  src="/puzzle.webp"
-                  alt="Puzzle"
-                  width={196}
-                  height={220}
-                  className="object-cover w-full h-full"
-                />
+              {/* Puzzle image overflows bottom-right */}
+              <div
+                className="absolute z-10 h-[120px] sm:h-[170px] md:h-[220px] aspect-[196/220]
+                            -bottom-8 -right-8 
+                            sm:-bottom-12 sm:-right-12 
+                            md:-bottom-20 md:-right-20"
+              >
+                <Image src="/puzzle.webp" alt="Puzzle" fill className="object-cover" style={{ objectFit: "cover" }} />
               </div>
             </div>
           </div>
@@ -93,19 +76,8 @@ export default function Hero() {
       {/* ALTTAKİ AŞAĞI KAYDIR OKU */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <button className="bg-secondary rounded-full p-3 md:p-4 hover:bg-blue-800 transition-colors">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 md:h-6 md:w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </button>
       </div>
