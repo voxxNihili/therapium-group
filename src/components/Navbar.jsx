@@ -57,7 +57,7 @@ const Navbar = () => {
   const textClass = isBlueDesign ? 'text-white' : 'text-gray-700';
   const textHoverClass = isBlueDesign ? 'hover:text-[#FBDB12]' : 'hover:text-[#2d6c9b]';
   const logoSrc = isBlueDesign ? "/therapium-logo-white.png" : "/therapium-group-logo.png";
-  const buttonBgClass = 'bg-[#FBDB12] text-gray-900 ' + (isBlueDesign ? 'hover:bg-white' : 'hover:bg-[#27557C] hover:text-white');
+  const buttonBgClass = 'bg-[#FBDB12] ' + (isBlueDesign ? 'hover:bg-white' : 'hover:bg-[#27557C] hover:text-white');
   const mobileButtonClass = isBlueDesign ? 'text-white hover:text-gray-200 hover:bg-[#2d6c9b]' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 ';
   const mobileMenuBgClass = isBlueDesign ? 'bg-[#27557C]' : 'bg-white';
 
@@ -95,7 +95,7 @@ const Navbar = () => {
             <a
               href="#application-form"
               onClick={scrollToApplicationForm}
-              className={`${buttonBgClass} px-9 py-[14px] text-sm font-medium transition-colors duration-300 cursor-pointer`}
+              className={`${buttonBgClass} text-[#27557C] px-7 py-[12px] text-base font-medium transition-colors duration-300 cursor-pointer`}
             >
               Leader werden
             </a>

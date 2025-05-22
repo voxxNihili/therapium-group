@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function HeroEnver() {
   return (
     <section className="w-full min-h-screen bg-secondary py-16 flex items-center justify-center">
-      <div className="w-[90%] max-w-6xl mx-auto">
-        <div className="bg-primary shadow-lg flex flex-col md:flex-row items-center justify-between p-8 md:p-12">
+      <div className="w-[90%] max-w-6xl ml-auto">
+        <div className="bg-primary shadow-lg flex flex-col md:flex-row items-right justify-between p-8 md:p-12">
           {/* Left: Content */}
           <div className="w-full md:w-1/2 text-white flex flex-col justify-center items-start mb-8 md:mb-0 md:mr-8">
             <h2 className="text-xl md:text-2xl font-light mb-4">Gründer & Multiunternehmer</h2>
@@ -21,9 +21,9 @@ export default function HeroEnver() {
               href="https://podcasts.apple.com/de/podcast/13-enver-pinarbasi-gr%C3%BCnder-von-therapium/id1677170075?i=1000635806856"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FBDB12] text-[#27557C] w-20 h-20 flex items-center justify-center font-medium text-base hover:bg-opacity-90 transition-all"
+              className="bg-[#FBDB12] text-[#27557C] rounded-full w-20 h-20 flex items-center justify-center font-medium text-base hover:bg-opacity-90 transition-all"
             >
-              <span className="flex items-center">
+              <span className="flex items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
