@@ -6,10 +6,10 @@ import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
 const CareerPath = () => {
-  const [expanded, setExpanded] = React.useState("panel1");
+  const [expanded, setExpanded] = React.useState("panel0");
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMedium = useMediaQuery('(max-width:1440px)');
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery("(max-width:1440px)");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -19,37 +19,124 @@ const CareerPath = () => {
     {
       id: "panel1",
       number: "1",
-      title: "Dein Bewerbung für das Leadership-Programm",
+      title: "KICKOFF – Motivation, Mindset & Vision",
       content:
-        "Der erste Schritt in deine Selbstständigkeit beginnt mit der Bewerbung über unser Formular. Hier teilst du uns deine Motivation mit und sendest deinen Lebenslauf ein. Dies ist die erste Gelegenheit, um uns von deiner Leidenschaft für Physiotherapie und deinen unternehmerischen Ambitionen zu überzeugen.",
+        "• Willkommen & Auftakt<br/>" +
+        "• Persönliche Begrüßung & Intro durch dich als Gründer<br/>" +
+        "• Warum gibt es diese Leadership-Reihe?<br/>" +
+        "• Die Leadership-Reihe & dein Weg (Überblick über alle Module)<br/>" +
+        "• Persönliche Entwicklung (Aushändigung der Exit-Karte)<br/>" +
+        "• Vision, Mission & Werte von THERAPIUM<br/>" +
+        "• Bezirkswunsch: „Wo sehe ich meine Praxis?“<br/>" +
+        "• Vorstellung von THERAPIUM (Partner, Backoffice und externer Coach)<br/>" +
+        "• Komfortzone, Motivation & Mindset",
     },
     {
       id: "panel2",
       number: "2",
-      title: "Sichtung & Erstgespräch",
+      title: "Modul 1 – Der Weg zur Selbstständigkeit",
       content:
-        "Nachdem wir deine Bewerbung geprüft haben, laden wir dich zu einem persönlichen Gespräch ein. Hier lernen wir dich kennen, tauschen erste Informationen aus und klären deine Fragen. So schaffen wir eine Basis für eine mögliche Partnerschaft und den nächsten Karriereschritt.",
+        "Die 10 Schritte zur eigenen Praxis:<br/>" +
+        "• Warum / Wille / Motivation<br/>" +
+        "• Mindset / Komfortzone<br/>" +
+        "• Vision / Ziel<br/>" +
+        "• Marktanalyse (Patienten- und Mitarbeiterprofil)<br/>" +
+        "• Marke / Prozesse / Digitalisierung<br/>" +
+        "• Zulassung & Verträge<br/>" +
+        "• Businessplan & Finanzierung<br/>" +
+        "• Bauphase<br/>" +
+        "• Marketing<br/>" +
+        "• Führungsqualität<br/>" +
+        "• Chancen, Risiken & Entwicklungsmöglichkeiten",
     },
     {
       id: "panel3",
       number: "3",
-      title: "Start des Leadership-Programms",
+      title: "Modul 2 – Unternehmensstruktur & Rollenverständnis",
       content:
-        "Jetzt beginnt dein Weg als zukünftiger Geschäftsführer! Im Leadership-Programm erhältst du wertvolle Einblicke in die Unternehmensführung durch Seminare, Workshops und den Austausch mit Experten. Du lernst unser erprobtes Konzept kennen und erhältst exklusive Behind-the-Scenes-Einblicke in erfolgreiche THERAPIUM-Standorte.",
+        "• Überblick: Organigramm & Unternehmensstruktur<br/>" +
+        "• Geschäftsführung, Praxisleiter, stellvertretende Leitung<br/>" +
+        "• Executive Assistant<br/>" +
+        "• HR, Backoffice, Marketing<br/>" +
+        "• Meetingkultur & Entscheidungsebenen<br/>" +
+        "• Tools & Systeme: Factorial, Just Social, Motion und Reteach<br/>" +
+        "• Zusammenarbeit & Schnittstellen verstehen",
     },
     {
       id: "panel4",
       number: "4",
-      title: "Abschluss & Standortsuche",
+      title: "Modul 3 – Praxisabläufe & Standard Operating Procedure",
       content:
-        "Nach dem erfolgreichen Abschluss des Leadership-Programms beginnt die gezielte Suche nach der passenden Praxis für dich. Dank unseres starken Netzwerks und kontinuierlicher Marktanalyse finden wir Standorte, die perfekt zu deinem individuellen Konzept und unserer THERAPIUM-Strategie passen.",
+        "• Das Geschäftsführer-Playbook: Entscheidungen, Prioritäten & Standards<br/>" +
+        "• Handbuch für Standortleiter<br/>" +
+        "• Mitarbeiterhandbücher (Empfang und Physiotherapie)<br/>" +
+        "• Dokumentenmanagement (Checklisten)<br/>" +
+        "• Qualitätsmanagement & Prozesssicherheit",
     },
     {
       id: "panel5",
       number: "5",
-      title: "Grand Opening & Start deiner Selbstständigkeit",
+      title: "Modul 4 – Kommunikation & Netzwerkpflege",
       content:
-        "Der letzte Schritt: Die Eröffnung deiner eigenen THERAPIUM-Praxis! Mit einem optimalen Standort und unserem bewährten System startest du sicher und erfolgreich in die Selbstständigkeit. Dein Grand Opening markiert den Beginn einer vielversprechenden Karriere als Geschäftsführer – mit THERAPIUM an deiner Seite. ",
+        "• Kommunikationskultur bei THERAPIUM<br/>" +
+        "• Kommunikationsmodelle (z. B. gewaltfreie Kommunikation & aktives Zuhören)<br/>" +
+        "• Führungskommunikation & Konfliktgespräche<br/>" +
+        "• Professioneller Umgang mit Patienten<br/>" +
+        "Netzwerkaufbau:<br/>" +
+        "• Kooperation mit Ärzten, Therapeuten & Kliniken<br/>" +
+        "• Repräsentation der Praxis nach außen",
+    },
+    {
+      id: "panel6",
+      number: "6",
+      title: "Modul 5 – Personalführung & Teamentwicklung",
+      content:
+        "• Leadership-Philosophie & Vorbildrolle<br/>" +
+        "• Führung durch Haltung & Selbstführung<br/>" +
+        "• Authentizität, Integrität & Wirkung<br/>" +
+        "• Führungsstile und situatives Führen<br/>" +
+        "• Teamentwicklung & Rollenverantwortung<br/>" +
+        "• Teamphasen, Gruppendynamik & Rollenverteilung<br/>" +
+        "• Feedback & Entwicklungsgespräche<br/>" +
+        "• Konfliktmanagement im Führungsalltag<br/>" +
+        "• Wirtschaftspsychologie & Change Management<br/>" +
+        "• Motivationstheorien<br/>" +
+        "• Umgang mit Widerstand & Veränderung<br/>" +
+        "• Kulturarbeit & Mitarbeiterbindung<br/>" +
+        "• Identifikation, Rituale & gelebte Werte",
+    },
+    {
+      id: "panel7",
+      number: "7",
+      title: "Modul 6 – Finanzen, Verwaltung & Verantwortung",
+      content:
+        "• Betriebswirtschaftliche Grundlagen<br/>" +
+        "• Kostenstruktur, Deckungsbeiträge, Liquiditätsplanung<br/>" +
+        "• Behandlungsmix & Wirtschaftlichkeit<br/>" +
+        "KPI-Verantwortung & Controlling:<br/>" +
+        "• Umsatz, Auslastung, Fallzahlen & Benchmarks<br/>" +
+        "• Monats-/Quartalsberichte interpretieren & handeln<br/>" +
+        "Verwaltung & Organisation:<br/>" +
+        "• ETL, Steuerberater, Lohn & Verträge<br/>" +
+        "• Personalplanung, Urlaube & Fehlzeiten<br/>" +
+        "Rechtliche Grundlagen & Pflichten: <br/>" +
+        "• GmbH-Recht, Datenschutz & Arbeitsschutz<br/>" +
+        "• Geschäftsführer-Haftung & Pflichten<br/>" +
+        "Ownership-Mindset: <br/>" +
+        "• Verantwortung übernehmen & unternehmerisch denken",
+    },
+    {
+      id: "panel8",
+      number: "8",
+      title: "Modul 7 – Partnerschaft bei THERAPIUM",
+      content:
+        "• Was bedeutet Unternehmertum bei THERAPIUM?<br/>" +
+        "• Chancen erkennen & Risiken bewerten<br/>" +
+        "• Standortentwicklung & langfristige Vision<br/>" +
+        "Voraussetzungen für eine Partnerschaft: <br/>" +
+        "• Erwartungen, Beteiligung & Mitgestaltung<br/>" +
+        "• Persönliche & fachliche Reife<br/>" +
+        "• Mein Commitment zur unternehmerischen Rolle",
     },
   ];
 
@@ -139,18 +226,24 @@ const CareerPath = () => {
               </Typography>
             </Box>
           </AccordionSummary>
-          <AccordionDetails sx={{ 
-            pl: isMobile ? 5 : isMedium ? 8 : 12, 
-            pr: 4, 
-            pb: 3, 
-            width: isMobile ? "100%" : isMedium ? "80%" : "69%" 
-          }}>
-            <Typography sx={{ 
-              fontFamily: "var(--font-lato), sans-serif", 
-              fontSize: isMobile ? "15px" : isMedium ? "16px" : "17px", 
-              lineHeight: isMobile ? "22px" : isMedium ? "24px" : "27px" 
-            }}>
-              {step.content}
+          <AccordionDetails
+            sx={{
+              pl: isMobile ? 5 : isMedium ? 8 : 12,
+              pr: 4,
+              pb: 3,
+              width: isMobile ? "100%" : isMedium ? "80%" : "69%",
+            }}
+          >
+            <Typography
+              component="div"
+              sx={{
+                fontFamily: "var(--font-lato), sans-serif",
+                fontSize: isMobile ? "15px" : isMedium ? "16px" : "17px",
+                lineHeight: isMobile ? "22px" : isMedium ? "24px" : "27px",
+              }}
+              dangerouslySetInnerHTML={{ __html: step.content }}
+            >
+           
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -175,7 +268,7 @@ const CareerPath = () => {
             fontSize: isMobile ? "18px" : isMedium ? "20px" : "24px",
             lineHeight: isMobile ? "26px" : isMedium ? "30px" : "35px",
             mb: isMobile ? 3 : 0,
-            color: "#191919"
+            color: "#191919",
           }}
         >
           Wenn auch du diesen Weg beschreiten möchtest, schicke uns deine Bewerbung!
