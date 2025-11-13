@@ -50,9 +50,20 @@ const CareerPath = () => {
         "• Chancen, Risiken & Entwicklungsmöglichkeiten",
     },
     {
-      id: "panel3",
+      id: "panel4",
       number: "3",
-      title: "Modul 2 – Unternehmensstruktur & Rollenverständnis",
+      title: "Modul 2 – Praxisabläufe & Standard Operating Procedure",
+      content:
+        "• Das Geschäftsführer-Playbook: Entscheidungen, Prioritäten & Standards<br/>" +
+        "• Handbuch für Standortleiter<br/>" +
+        "• Mitarbeiterhandbücher (Empfang und Physiotherapie)<br/>" +
+        "• Dokumentenmanagement (Checklisten)<br/>" +
+        "• Qualitätsmanagement & Prozesssicherheit",
+    },
+    {
+      id: "panel3",
+      number: "4",
+      title: "Modul 3 – Unternehmensstruktur & Rollenverständnis",
       content:
         "• Überblick: Organigramm & Unternehmensstruktur<br/>" +
         "• Geschäftsführung, Praxisleiter, stellvertretende Leitung<br/>" +
@@ -61,17 +72,6 @@ const CareerPath = () => {
         "• Meetingkultur & Entscheidungsebenen<br/>" +
         "• Tools & Systeme: Factorial, Just Social, Motion und Reteach<br/>" +
         "• Zusammenarbeit & Schnittstellen verstehen",
-    },
-    {
-      id: "panel4",
-      number: "4",
-      title: "Modul 3 – Praxisabläufe & Standard Operating Procedure",
-      content:
-        "• Das Geschäftsführer-Playbook: Entscheidungen, Prioritäten & Standards<br/>" +
-        "• Handbuch für Standortleiter<br/>" +
-        "• Mitarbeiterhandbücher (Empfang und Physiotherapie)<br/>" +
-        "• Dokumentenmanagement (Checklisten)<br/>" +
-        "• Qualitätsmanagement & Prozesssicherheit",
     },
     {
       id: "panel5",
